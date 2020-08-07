@@ -1,9 +1,13 @@
 import React from 'react';
+import MovieList from "./components/MovieList/MovieList";
+
 import './App.css';
 
 function App() {
   return (
-   <h1>Hello i am your sample</h1>
+  <div>
+   <MovieList />
+  </div>
   );
 }
 
