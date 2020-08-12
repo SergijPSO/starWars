@@ -1,29 +1,32 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
-// import ReactDom from 'react-dom';
+import Loader from '../global/Loader/Loader';
 
 import '../MovieList/MovieList.css';
-
 import axios from 'axios';
 
 class MovieList extends React.Component{
 
 	state = {
-		MoviesData : []
+		MoviesData : [],
+		loading: true
 	}
 
 	componentDidMount() {
 		axios.get('https://swapi.dev/api/films/').then(res => {
 			this.setState({
+				loading: false,
 				MoviesData: res.data.results
 			})
 		})
 	}
 
  render(){  
+	 console.log(this.state.loading)
   return(
     <>
-    	<MovieCard MoviesInfo={this.state.MoviesData}/>
+    	<MovieCard moviesInfo={this.state.MoviesData}/>
+			{this.state.loading ? <Loader/> : ''}
     </>        
   )
  }
