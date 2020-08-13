@@ -22,11 +22,10 @@ class MovieList extends React.Component{
 	}
 
  render(){  
-	 console.log(this.state.loading)
   return(
     <>
     	<MovieCard moviesInfo={this.state.MoviesData}/>
-			{this.state.loading ? <Loader/> : ''}
+		{this.state.loading && <Loader />}
     </>        
   )
  }
