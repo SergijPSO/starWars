@@ -7,11 +7,10 @@ class MovieCard extends React.Component{
 render(){
 
 let movieDetails = this.props.moviesInfo;
-let k =0;
  return(
     movieDetails.map(el => {
       return(
-        <span  key={k++} className="movie-title">
+        <span  key={el.episode_id} className="movie-title">
           {`Episode:${el.episode_id} - ${el.title}`}
         </span>
       )
