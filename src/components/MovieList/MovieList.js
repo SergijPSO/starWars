@@ -13,7 +13,8 @@ class MovieList extends React.Component{
 	}
 
 	componentDidMount() {
-		axios.get('https://swapi.dev/api/films/').then(res => {
+		axios.get('https://swapi.dev/api/films/')
+		.then(res => {
 			this.setState({
 				loading: false,
 				MoviesData: res.data.results
@@ -21,14 +22,14 @@ class MovieList extends React.Component{
 		})
 	}
 
- render(){  
-  return(
-    <>
-    	<MovieCard moviesInfo={this.state.MoviesData}/>
-		{this.state.loading && <Loader />}
-    </>        
-  )
- }
+	render(){  
+		return(
+			<>
+				<MovieCard  moviesInfo={this.state.MoviesData}/>
+				{this.state.loading && <Loader />}
+			</>        
+		)
+	}
 }
 
 export default MovieList

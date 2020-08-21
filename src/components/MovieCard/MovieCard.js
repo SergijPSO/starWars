@@ -1,18 +1,21 @@
 import React from 'react';
-
 import '../MovieCard/MovieCard.css';
 
-class MovieCard extends React.Component{
-  
-render(){
+import {NavLink} from 'react-router-dom';
 
+class MovieCard extends React.Component{
+render(){
+  
 let movieDetails = this.props.moviesInfo;
- return(
+
+  return(
     movieDetails.map(el => {
       return(
-        <span  key={el.episode_id} className="movie-title">
-          {`Episode:${el.episode_id} - ${el.title}`}
-        </span>
+        <NavLink to={`/film-${el.episode_id}`}>
+          <span  key={el.episode_id} className="movie-title">
+            {`Episode:${el.episode_id} - ${el.title}`}
+          </span>
+        </NavLink>
       )
     })
   )
