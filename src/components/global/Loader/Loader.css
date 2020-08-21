@@ -55,33 +55,34 @@
         }
     }
     
-    /* ul li:nth-child(1) {
-        animation-delay: .1s;
-    } */
-    ul li:nth-child(2) {
+    ul li:nth-child(1) {
     animation-delay: .1s;
     }
-    ul li:nth-child(3) {
+    ul li:nth-child(2) {
     animation-delay: .2s;
     }
-    ul li:nth-child(4) {
+    ul li:nth-child(3) {
     animation-delay: .3s;
     }
-    ul li:nth-child(5) {
+    ul li:nth-child(4) {
     animation-delay: .4s;
     }
-    ul li:nth-child(6) {
+    ul li:nth-child(5) {
     animation-delay: .5s;
     }
-    ul li:nth-child(7) {
+    ul li:nth-child(6) {
     animation-delay: .6s;
     }
-    ul li:nth-child(8) {
+    ul li:nth-child(7) {
     animation-delay: .7s;
     }
-    ul li:nth-child(9) {
+    ul li:nth-child(8) {
     animation-delay: .8s;
     }
-    ul li:nth-child(10) {
-    animation-delay: .1s;
+    ul li:nth-child(9) {
+    animation-delay: .9s;
     }
+    ul li:nth-child(10) {
+    animation-delay: .0s;
+    }
+    /*Loader Ends*/
